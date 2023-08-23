@@ -32,26 +32,7 @@
       styleSelect.addEventListener('change', () => {
         const style = styleSelect.value;
         styleLink.href = style;
-        setStyleLocalStorage(style);
       });
-  
-      function setStyleLocalStorage(style) {
-        localStorage.setItem('selectedStyle', style);
-      }
-  
-      function getStyleLocalStorage() {
-        return localStorage.getItem('selectedStyle');
-      }
-  
-      function setInitialStyle() {
-        const selectedStyle = getStyleLocalStorage();
-        if (selectedStyle) {
-          styleLink.href = selectedStyle;
-          styleSelect.value = selectedStyle;
-        }
-      }
-  
-      setInitialStyle();
     </script>
   </head>
   <body>
